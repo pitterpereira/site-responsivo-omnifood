@@ -84,14 +84,81 @@ body {
   color: #555555;
 }
 
+/* -------------------------------------------------------------------------------- */
+/* HEADER + NAV                                                                           */
+/* -------------------------------------------------------------------------------- */
+
+.header {
+  height: 9.6rem;
+  padding: 0 4.8rem;
+
+  background-color: #fdf2e9;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #333;
+
+  transition: background-color 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+/* Precisa ter as duas classes para ativar */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+
+  border-radius: 9px;
+
+  color: white;
+  background-color: #e67e22;
+}
+
+/* Precisa ter as duas classes para ativar */
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*   HERO SECTION                                                                   */
+/* -------------------------------------------------------------------------------- */
+
 .section-hero {
   background-color: #fae5d3;
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
   max-width: 130rem; /* Quando a imagem se torna menor que o viewport, ocupa 100% dele*/
   margin: 0 auto;
+  padding: 0 3.2rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
