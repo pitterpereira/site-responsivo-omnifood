@@ -64,7 +64,7 @@
 }
 
 .grid:last-child {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .grid:not(last-child) {
@@ -90,5 +90,3 @@
 strong {
   font-weight: 500;
 }
-
-
