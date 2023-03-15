@@ -72,6 +72,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  box-shadow: 0 0 0 0.8rem #e67e22;
+}
+
 html {
   /* font-size: 10px; Cria problemas de usabilidade para os usuários */
   font-size: 62.5%; /* 16 -> 10 - Porcentagem da configuração do tamanho da fonte no browser do usuário*/
@@ -85,7 +89,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------------
-  HEADER + NAV                                                                     
+  HEADER + NAV
 ----------------------------------------------------------------------------------- */
 
 .header {
@@ -147,7 +151,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------------
-  HERO SECTION                                                                  
+  HERO SECTION
 ----------------------------------------------------------------------------------- */
 
 .section-hero {
@@ -176,18 +180,22 @@ body {
   margin-bottom: 4.8rem;
 }
 
-.btn:link,
+.btn, .btn:link,
 .btn:visited {
   display: inline-block;
   padding: 1.6rem 3.2rem;
 
   font-size: 2rem;
   font-weight: 600;
+  font-family: inherit;
   text-decoration: none;
 
   color: #fff;
 
   border-radius: 9px;
+
+  border: none;
+  cursor: pointer;
 
   /* Todas as propriedades serão afetadas por 1 segundo*/
   transition: all 300ms;
@@ -261,7 +269,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------------
-  FEATURED SECTION                                                                  
+  FEATURED SECTION
 ----------------------------------------------------------------------------------- */
 
 .section-featured {
@@ -290,7 +298,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------------
-  HOW IT WORKS SECTION                                                                  
+  HOW IT WORKS SECTION
 ----------------------------------------------------------------------------------- */
 
 .section-how {
@@ -351,7 +359,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------------
-  MEALS SECTION                                                                  
+  MEALS SECTION
 ----------------------------------------------------------------------------------- */
 
 .section-meals {
@@ -480,7 +488,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------------
-  TESTIMONIALS SECTION                                                                  
+  TESTIMONIALS SECTION
 ----------------------------------------------------------------------------------- */
 
 .section-testimonials {
@@ -541,7 +549,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------------
-  PRICING SECTION                                                                  
+  PRICING SECTION
 ----------------------------------------------------------------------------------- */
 
 .section-pricing {
@@ -619,3 +627,119 @@ body {
   text-align: center;
   margin-top: 4.8rem;
 }
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  color: #e67e22;
+  height: 2.4rem;
+  width: 3.2rem;
+  margin-bottom: 3.2rem;
+  background-color: #fdf2e9;
+  padding: 1.6rem; /* O padding vai ser inserido para fora */
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------------
+  CTA SECTION
+----------------------------------------------------------------------------------- */
+
+.section-cta {
+  padding: 9.6rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #e67e22;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(to right bottom, rgba(235, 152, 78, 0.3), rgba(230, 126, 34, 0.3)), url("../img/eating.jpg");
+  background-size: cover; /* Completa o container onde estiver */
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input, .cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.cta-form input::placeholder {
+ color: #aaa;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end; /* Grid item - Align self */
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+/* --------------------------------------------------------------------------------
+  FOOTER SECTION
+----------------------------------------------------------------------------------- */
