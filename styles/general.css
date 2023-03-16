@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------------------------
-  REUTILIZÁVEIS                                                                    
+  REUTILIZÁVEIS
 ----------------------------------------------------------------------------------- */
 
 .heading-primary,
@@ -89,6 +89,10 @@
 
 .grid--center-v {
   align-items: center;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 }
 
 strong {
