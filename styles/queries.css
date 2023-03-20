@@ -1,18 +1,122 @@
+/* De forma ideal, uma media querrie deve funcionar dentro de uma área de 200 a 300px */
 
 /*
     1344 / 16 = 84em
     Disparará abaixo de 1344px
 */
 @media (max-width: 84em) {
-    .hero {
-        max-width: 120rem;
-    }
+  .hero {
+    max-width: 120rem;
+  }
 
-    .heading-primary {
-        font-size: 4.4rem;
-    }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
 
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*
+    1200 / 16 = 75
+    Disparará abaixo de 1200px
+*/
+
+@media (max-width: 75em) {
+  /* Como fizemos todas as fontes do tipo rem, elas são todas relativas ao tamanho da fonte definida no HTML */
+  html {
+    /*9px / 16 */
+    font-size: 56.2%;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    /* Ainda imaginando que 1rem = 10px */
+    font-size: 3.6rem;
+  }
+
+  .heading.tertiary {
+    font-size: 2.4rem;
+  }
+
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+/*
+    944 / 16 = 58,75
+    Disparará abaixo de 940px
+*/
+
+@media (max-width: 59em) {
+  html {
+    /*8px / 16 */
+    font-size: 50%;
+  }
+
+  .hero {
+    padding: 0 8rem;
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .delivered-meals {
+    margin-top: 3.2rem;
+    justify-content: center;
+  }
+
+  .logos img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
 }
