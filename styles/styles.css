@@ -79,6 +79,9 @@
 html {
   /* font-size: 10px; Cria problemas de usabilidade para os usuários */
   font-size: 62.5%; /* 16 -> 10 - Porcentagem da configuração do tamanho da fonte no browser do usuário*/
+
+  /* Os elementos que vazarem horizontalmente, ficaram escondidos */
+  overflow-x: hidden;
 }
 
 body {
@@ -86,6 +89,9 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555555;
+
+  /* Os elementos que vazarem horizontalmente, ficaram escondidos */
+  overflow-x: hidden;
 }
 
 /* --------------------------------------------------------------------------------
@@ -101,6 +107,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
 }
 
 .logo {
@@ -148,6 +156,29 @@ body {
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
+}
+
+/* --------------------------------------------------------------------------------
+  MOBILE
+----------------------------------------------------------------------------------- */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+/* Selecionando baseado em atributos */
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /* --------------------------------------------------------------------------------

@@ -63,7 +63,7 @@
 
 /*
     944 / 16 = 58,75
-    Disparará abaixo de 940px
+    Disparará abaixo de 944px
 */
 
 @media (max-width: 59em) {
@@ -122,5 +122,85 @@
 
   .btn--form {
     margin-top: 1.2;
+  }
+
+  /* ---------------- Mobile ---------------- */
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-in;
+
+    /* Esconder o novo menu sem ser com display: none, pois ele não permite transition */
+    opacity: 0;
+    /* Deixar inacessível ao teclado e mouse */
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* Quando nav-open existir, aparecer o X*/
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  /* Quando nav-open existir, aparecer o X*/
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3.5rem;
+  }
+
+  .nav-open .main-nav {
+    /* Apagar visualização */
+    opacity: 1;
+
+    /* Deixar inacessível ao teclado e mouse */
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(0);
+  }
+}
+
+/*
+    704 / 16 = 44
+    Disparará abaixo de 704px
+*/
+
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
   }
 }
