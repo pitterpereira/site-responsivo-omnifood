@@ -34,7 +34,7 @@ allLinks.forEach(function (link) {
   });
 });
 
-// Sticky navigation
+// Sticky navigation - A partir da seção section.hero
 const sectionHeroEl = document.querySelector(".section-hero");
 
 const obs = new IntersectionObserver(
